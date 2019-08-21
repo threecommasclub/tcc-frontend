@@ -2,10 +2,26 @@
   "name": "tcc-frontend",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=10.16.3"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "./node_modules/.bin/eslint './**/*.{js, jsx, ts,tsx}'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write",
+      "yarn lint",
+      "git add"
+    ]
   },
   "dependencies": {
     "next": "9.0.4",
@@ -23,6 +39,8 @@
     "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
+    "husky": "^3.0.4",
+    "lint-staged": "^9.2.3",
     "postcss-easy-import": "^3.0.0",
     "prettier": "^1.18.2",
     "typescript": "^3.5.3"

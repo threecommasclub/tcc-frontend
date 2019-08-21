@@ -1,6 +1,10 @@
 module.exports = {
   parser: '@typescript-eslint/parser', // Specifies the ESLint parser
-
+  settings: {
+    react: {
+      version: require('react/package.json').version,
+    },
+  },
   extends: [
     'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
     'plugin:react/recommended', // uses react-specific linting rules
