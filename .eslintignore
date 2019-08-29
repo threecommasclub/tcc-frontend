@@ -2,6 +2,7 @@
 # /node_modules/* and /bower_components/* in the project root are ignored by default
 node_modules
 .eslintrc.js
+tsconfig.json
 package.json
 # Ignore built files except build/index.js
 build/*
