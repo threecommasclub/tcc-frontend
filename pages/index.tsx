@@ -1,11 +1,12 @@
 import React from 'react';
 
 import Button from '../components/buttons/button';
+import Header from '../components/header/header';
 
 const Home: React.FC<{}> = () => {
   return (
     <div>
-      <h1 className="bg-red-400 text-white p-6">TCC</h1>
+      <Header>TCC</Header>
       <Button>Submit</Button>
     </div>
   );
