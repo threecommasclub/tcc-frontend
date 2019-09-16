@@ -8,6 +8,31 @@
     "build": "docker-compose -p tcc build",
     "stop": "docker-compose -p tcc stop",
     "clean": "docker system prune -af",
-    "clean:volumes": "docker volume prune -f"
+    "clean:volumes": "docker volume prune -f",
+    "lint": "./node_modules/.bin/eslint './**/*.{js, jsx, ts,tsx}'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write",
+      "yarn lint",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.2.0",
+    "@typescript-eslint/parser": "^2.2.0",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
+    "prettier": "^1.18.2",
+    "typescript": "^3.6.3"
   }
 }
