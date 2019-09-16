@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  frontend:
+    build:
+      context: frontend
+    command: yarn dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/usr/src/app/
+      - /usr/src/app/node_modules
+
+  storybook:
+    build:
+      context: frontend
+    command: yarn storybook
+    ports:
+      - "6006:6006"
+    volumes:
+      - ./frontend:/usr/src/app/
+      - /usr/src/app/node_modules
