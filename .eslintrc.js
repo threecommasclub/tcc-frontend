@@ -23,5 +23,7 @@ module.exports = {
 
   plugins: ['react', '@typescript-eslint', 'prettier'],
 
-  rules: {},
+  rules: {
+    '@typescript-eslint/explicit-function-return-type': 0,
+  },
 };
