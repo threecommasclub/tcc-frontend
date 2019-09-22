@@ -1,0 +1,21 @@
+query Companies {
+  companies {
+    id
+    name
+    logo
+    address
+    city
+    province
+    country
+    zip_code
+    industry
+    size
+    founded
+    description
+    email
+    tel
+    website
+    facebook
+    linkedin
+  }
+}
