@@ -13,14 +13,14 @@ export type Scalars = {
 
 export type Company = {
   __typename?: 'Company';
-  id: Scalars['Int'];
+  id: Scalars['ID'];
   name: Scalars['String'];
   logo: Scalars['String'];
   address: Scalars['String'];
   city: Scalars['String'];
   province: Scalars['String'];
   country: Scalars['String'];
-  zip_code: Scalars['String'];
+  zipCode: Scalars['String'];
   industry: Scalars['String'];
   size: Scalars['String'];
   founded: Scalars['Float'];
@@ -30,6 +30,7 @@ export type Company = {
   website: Scalars['String'];
   facebook?: Maybe<Scalars['String']>;
   linkedin?: Maybe<Scalars['String']>;
+  location: Location;
 };
 
 export type CompanyCreateInput = {
@@ -39,7 +40,7 @@ export type CompanyCreateInput = {
   city: Scalars['String'];
   province: Scalars['String'];
   country: Scalars['String'];
-  zip_code: Scalars['String'];
+  zipCode: Scalars['String'];
   industry: Scalars['String'];
   size: Scalars['String'];
   founded: Scalars['Float'];
@@ -49,6 +50,14 @@ export type CompanyCreateInput = {
   website: Scalars['String'];
   facebook?: Maybe<Scalars['String']>;
   linkedin?: Maybe<Scalars['String']>;
+  lat: Scalars['Float'];
+  lng: Scalars['Float'];
+};
+
+export type Location = {
+  __typename?: 'Location';
+  lat: Scalars['Float'];
+  lon: Scalars['Float'];
 };
 
 export type LoginResponse = {
@@ -60,7 +69,7 @@ export type LoginResponse = {
 export type Mutation = {
   __typename?: 'Mutation';
   login: LoginResponse;
-  register: Scalars['Boolean'];
+  register: User;
   companyCreate: Company;
 };
 
@@ -70,8 +79,7 @@ export type MutationLoginArgs = {
 };
 
 export type MutationRegisterArgs = {
-  password: Scalars['String'];
-  email: Scalars['String'];
+  input: RegisterInput;
 };
 
 export type MutationCompanyCreateArgs = {
@@ -85,11 +93,15 @@ export type Query = {
   companies: Array<Company>;
 };
 
-export type User = {
-  __typename?: 'User';
-  id: Scalars['Int'];
+export type RegisterInput = {
   email: Scalars['String'];
   password: Scalars['String'];
+};
+
+export type User = {
+  __typename?: 'User';
+  id: Scalars['ID'];
+  email: Scalars['String'];
 };
 export type CompaniesQueryVariables = {};
 
@@ -104,7 +116,7 @@ export type CompaniesQuery = { __typename?: 'Query' } & {
       | 'city'
       | 'province'
       | 'country'
-      | 'zip_code'
+      | 'zipCode'
       | 'industry'
       | 'size'
       | 'founded'
@@ -128,7 +140,7 @@ export const CompaniesDocument = gql`
       city
       province
       country
-      zip_code
+      zipCode
       industry
       size
       founded

@@ -7,7 +7,7 @@ query Companies {
     city
     province
     country
-    zip_code
+    zipCode
     industry
     size
     founded
