@@ -1,5 +1,4 @@
 import React from 'react';
-import * as Starbucks from '../../static/starbucks.png';
 
 type CompanyCardProps = {
   children: React.ReactNode;
@@ -8,7 +7,7 @@ type CompanyCardProps = {
 const CompanyCard = ({ children }: CompanyCardProps) => (
   <div className="bg-green-400 text-white p-6 rounded-lg h-auto relative">
     <div className="w-1/6 h-1/6 inline-block m-0 align-top">
-      <img src={Starbucks} alt="company logo" />
+      <img src="/static/starbucks.png" alt="company logo" />
     </div>
     <div className="w-5/6 inline-block align-bottom pl-8">
       <div className="inline-block absolute top-3 right-5% top-1/10">test</div>
