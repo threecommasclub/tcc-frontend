@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text } from '@storybook/addon-knobs/react';
 
-import CompanyCard from './companyCard';
+import CompanyCard from './company-card';
 
 const label = 'Text';
 const defaultValue = 'Com title';

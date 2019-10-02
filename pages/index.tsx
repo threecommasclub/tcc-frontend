@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Header from '../components/header/header';
-import CompanyCard from '../components/companyCard/companyCard';
+import CompanyCard from '../components/cards/company-card';
 
 const Home = () => {
   return (
