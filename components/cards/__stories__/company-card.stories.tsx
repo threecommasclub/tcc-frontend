@@ -5,7 +5,7 @@ import { text } from '@storybook/addon-knobs/react';
 import CompanyCard from '../company-card';
 
 const label = 'Text';
-const defaultValue = 'Com title';
+const defaultValue = 'Company Using';
 
 storiesOf('companyCard', module).add('CompanyCardWithImage', () => (
   <CompanyCard>{text(label, defaultValue)}</CompanyCard>
