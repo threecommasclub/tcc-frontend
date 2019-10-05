@@ -7,6 +7,6 @@ import CompanyCard from '../company-card';
 const label = 'Text';
 const defaultValue = 'Company Using';
 
-storiesOf('companyCard', module).add('CompanyCardWithImage', () => (
+storiesOf('CompanyCard', module).add('CompanyCardWithImage', () => (
   <CompanyCard>{text(label, defaultValue)}</CompanyCard>
 ));
