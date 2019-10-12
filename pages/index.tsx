@@ -11,7 +11,8 @@ const props = {
 const Home = () => {
   return (
     <div>
-      <Header>TCC</Header>
+      <Header>This is Landing Page</Header>
+      <p>Please use /react page for implementing the project</p>
       <CompanyCard {...props} />
     </div>
   );
