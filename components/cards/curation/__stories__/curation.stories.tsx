@@ -6,7 +6,7 @@ import CurationCard from '../curation-card';
 
 const label = 'CurationCard';
 
-storiesOf('CurationCard', module).add(
+storiesOf('Cards/CurationCard', module).add(
   'CurationCard',
   () => {
     const defualtValue = {
