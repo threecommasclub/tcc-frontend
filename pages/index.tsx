@@ -1,7 +1,6 @@
 import React from 'react';
 
-import Header from '../components/header/header';
-import CompanyCard from '../components/cards/company-card';
+import { Header, CompanyCard } from '@tcc/components';
 
 const props = {
   name: 'companyUsing',

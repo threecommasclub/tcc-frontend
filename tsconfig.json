@@ -12,7 +12,7 @@
     "moduleResolution": "node",
     "noEmit": true,
     "paths": {
-      "@/*": ["./*"]
+      "@tcc/*": ["./*"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
