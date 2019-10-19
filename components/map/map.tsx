@@ -9,7 +9,7 @@ type MapProps = {
   zoom?: number;
 };
 
-const Map = ({ latitude, longitude, width, height, zoom }: MapProps) => {
+export const Map = ({ latitude, longitude, width, height, zoom }: MapProps) => {
   const [viewport, setViewPort] = useState({
     latitude,
     longitude,

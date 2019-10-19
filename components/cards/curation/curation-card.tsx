@@ -5,7 +5,7 @@ type CurationProps = {
   title: string;
 };
 
-const CurationCard = ({ titleImage, title }: CurationProps) => (
+export const CurationCard = ({ titleImage, title }: CurationProps) => (
   <div className="w-full shadow p-6">
     <div className="w-full">{title}</div>
   </div>

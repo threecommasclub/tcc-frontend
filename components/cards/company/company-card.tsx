@@ -6,7 +6,7 @@ type CompanyCardProps = {
   address: string;
 };
 
-const CompanyCard = ({ name, date, address }: CompanyCardProps) => (
+export const CompanyCard = ({ name, date, address }: CompanyCardProps) => (
   <div className="p-5 rounded-exlg h-auto relative shadow">
     <div className="w-1/6 h-1/6 inline-block m-0 align-middle">
       <div className="rounded-full bg-gray-600 w-16 h-16"></div>

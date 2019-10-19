@@ -1,15 +1,22 @@
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import { withInfo } from '@storybook/addon-info';
 
 import '../styles/tailwind.css';
 
 addDecorator(withKnobs);
 
+addDecorator(
+  withInfo({
+    inline: true,
+    source: true,
+  })
+);
+
 addParameters({
   viewport: {
     viewports: INITIAL_VIEWPORTS,
-    defaultViewport: 'iphonex',
   },
 });
 
