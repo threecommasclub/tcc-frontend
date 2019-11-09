@@ -54,6 +54,12 @@ export type CompanyCreateInput = {
   location: LocationInput,
 };
 
+export type EmailVerification = {
+   __typename?: 'EmailVerification',
+  id: Scalars['ID'],
+  userId: Scalars['String'],
+};
+
 export type Location = {
    __typename?: 'Location',
   lat: Scalars['Float'],
@@ -79,9 +85,9 @@ export type LoginResponse = {
 export type Mutation = {
    __typename?: 'Mutation',
   login: LoginResponse,
-  register: User,
   logout: Scalars['Boolean'],
   revokeRefreshTokensForUser: Scalars['Boolean'],
+  register: User,
   companyCreate: Company,
 };
 
@@ -91,13 +97,13 @@ export type MutationLoginArgs = {
 };
 
 
-export type MutationRegisterArgs = {
-  input: RegisterInput
+export type MutationRevokeRefreshTokensForUserArgs = {
+  userId: Scalars['String']
 };
 
 
-export type MutationRevokeRefreshTokensForUserArgs = {
-  userId: Scalars['String']
+export type MutationRegisterArgs = {
+  input: RegisterInput
 };
 
 
@@ -110,6 +116,7 @@ export type Query = {
   me?: Maybe<User>,
   users: Array<User>,
   authedQuery: Scalars['String'],
+  authorizedQuery: Scalars['String'],
   companies: Array<Company>,
 };
 

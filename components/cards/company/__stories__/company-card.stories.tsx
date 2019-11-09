@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { object } from '@storybook/addon-knobs/react';
 
-import { CompanyCard } from '../company-card';
+import { CompanyCard } from '../company-card.mobile';
 
 const label = 'CompanyCard';
 
