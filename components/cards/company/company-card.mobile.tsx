@@ -8,7 +8,7 @@ type CompanyCardProps = {
 const tags = ['Fintech', 'Employ Benefit', 'Consulting'];
 
 export const CompanyCard = ({ name, address }: CompanyCardProps) => (
-  <div className="p-5 rounded-exlg h-auto relative shadow-md border-gray-300 border">
+  <div className="p-5 rounded-exlg h-auto relative shadow-md border-gray-300 border mt-10 mb-5">
     <div className="w-1/6 h-1/6 inline-block m-0 align-middle">
       <div className="rounded-full bg-gray-600 w-16 h-16 absolute top-in20 shadow-md"></div>
     </div>
@@ -22,7 +22,7 @@ export const CompanyCard = ({ name, address }: CompanyCardProps) => (
       </div>
     </div>
     {tags.map((tag, index) => (
-      <div className="inline-block rounded-full bg-gray-500 mr-2" key={index}>
+      <div className="inline-block rounded-full bg-gray-500 mr-2 my-1" key={index}>
         <span className="font-bold text-base text-white px-4">{tag}</span>
       </div>
     ))}
