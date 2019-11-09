@@ -3,7 +3,8 @@
 node_modules
 .eslintrc.js
 tsconfig.json
-package.json
+package*.json
+
 # Ignore built files except build/index.js
 build/*
 !build/index.js

@@ -34,11 +34,6 @@ module.exports = {
       '4/10': '40%',
       '1/2': '50%',
     },
-    // colors: {
-    //   brownGrey: '#adadad',
-    //   paleBlue: '#e2e5eb',
-    //   red: '#de3618',
-    // }
   },
   variants: {},
   plugins: [],
