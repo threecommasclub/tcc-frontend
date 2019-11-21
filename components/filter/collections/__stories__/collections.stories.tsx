@@ -2,15 +2,14 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { object } from '@storybook/addon-knobs/react';
 
-import { CurationCard } from '../curation-card.mobile';
+import { CollectionsCard } from '../collections.mobile';
 
-const label = 'CurationCard';
+const label = 'CollectionsCard';
 
-storiesOf('Cards/CurationCard', module).add('CurationCard', () => {
+storiesOf('Filters/CollectionsCard', module).add('CollectionsCard', () => {
   const defaultValue = {
-    titleImage: 'titles',
     title: 'Top 10\nGreat work-space',
   };
   const props = object(label, defaultValue);
-  return <CurationCard {...props} />;
+  return <CollectionsCard {...props} />;
 });
