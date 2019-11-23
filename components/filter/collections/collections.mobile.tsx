@@ -1,5 +1,5 @@
 import React from 'react';
-import toronto from '../../../static/toronto-pic.png';
+import toronto from '../../../public/toronto-pic.png';
 
 type CollectionsCardProps = {
   title: string;
