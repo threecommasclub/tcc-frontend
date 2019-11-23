@@ -16,7 +16,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npx tsc --noEmit && lint-staged"
+      "pre-commit": "npx tsc --noEmit && lint-staged",
+      "post-merge": "install-deps-postmerge"
     }
   },
   "lint-staged": {
@@ -70,6 +71,7 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "husky": "^3.1.0",
+    "install-deps-postmerge": "^1.0.5",
     "jest": "^24.9.0",
     "lint-staged": "^9.4.3",
     "next-compose-plugins": "^2.2.0",
