@@ -10,7 +10,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "./node_modules/.bin/eslint --ext js,jsx,ts,tsx ./",
-    "storybook": "start-storybook -s ./public,./static -p 6006 --ci",
+    "storybook": "start-storybook -s ./public -p 6006 --ci",
     "build-storybook": "build-storybook",
     "gen": "graphql-codegen --config codegen.yml"
   },
