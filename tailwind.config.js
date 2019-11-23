@@ -19,6 +19,22 @@ module.exports = {
       large: '12px',
       exlg: '1em',
     },
+    borderWidth: {
+      default: '1px',
+      '0': '0',
+      '2': '2px',
+      '3': '3px',
+      '4': '4px',
+      '6': '6px',
+      '8': '8px',
+    },
+    padding: {
+      '1p': '1px',
+      sm: '8px',
+      md: '16px',
+      lg: '24px',
+      xl: '48px',
+    },
     inset: {
       in10: '-10px',
       in15: '-15px',
