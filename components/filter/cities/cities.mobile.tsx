@@ -1,13 +1,9 @@
-import React, { Fragment } from 'react';
-import toronto from '../../../static/toronto-pic.png';
-import vancouver from '../../../static/vancouver-pic.png';
-import newyork from '../../../static/newyork-pic.png';
-import Pin from '../../../static/Pin.png';
+import React from 'react';
 
 const cities = [
-  { name: 'Toronto', img: toronto, nation: 'Canada' },
-  { name: 'Vancouver', img: vancouver, nation: 'Canada' },
-  { name: 'Newyork', img: newyork, nation: 'United States' },
+  { name: 'Toronto', img: '/toronto-pic.png', nation: 'Canada' },
+  { name: 'Vancouver', img: '/vancouver-pic.png', nation: 'Canada' },
+  { name: 'Newyork', img: '/newyork-pic.png', nation: 'United States' },
 ];
 
 export const CitiesCard = () => (
@@ -22,7 +18,7 @@ export const CitiesCard = () => (
           <span className="text-lg font-bold text-gray-700 text-2xl">{city.name}</span>
         </div>
         <div>
-          <img className="inline mr-1 align-text-bottom fon" src={Pin} alt="location" />
+          <img className="inline mr-1 align-text-bottom fon" src="/Pin.png" alt="location" />
           <span className="text-lg text-indigo-800 font-normal">{city.nation}</span>
         </div>
       </div>
