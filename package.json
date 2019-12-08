@@ -16,7 +16,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npx tsc --noEmit && lint-staged"
+      "pre-commit": "npx tsc --noEmit && lint-staged",
+      "post-merge": "install-deps-postmerge"
     }
   },
   "lint-staged": {
@@ -39,7 +40,7 @@
     "graphql": "^14.5.8",
     "isomorphic-unfetch": "^3.0.0",
     "next": "9.0.6",
-    "react": "16.10.2",
+    "react": "16.12.0",
     "react-apollo": "^3.1.3",
     "react-dom": "16.10.2",
     "react-map-gl": "^5.0.12",
@@ -59,26 +60,27 @@
     "@types/graphql": "^14.5.0",
     "@types/jest": "^24.0.19",
     "@types/node": "^12.11.1",
-    "@types/react": "^16.9.9",
+    "@types/react": "^16.9.13",
     "@types/react-map-gl": "^5.0.2",
     "@types/storybook__react": "^4.0.2",
     "@typescript-eslint/eslint-plugin": "^2.4.0",
     "@typescript-eslint/parser": "^2.4.0",
     "@zeit/next-css": "^1.0.1",
     "babel-loader": "^8.0.6",
-    "eslint": "^6.5.1",
-    "eslint-config-prettier": "^6.4.0",
+    "eslint": "^6.7.0",
+    "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
-    "husky": "^3.0.9",
+    "husky": "^3.1.0",
+    "install-deps-postmerge": "^1.0.5",
     "jest": "^24.9.0",
-    "lint-staged": "^9.4.2",
+    "lint-staged": "^9.4.3",
     "next-compose-plugins": "^2.2.0",
     "postcss-easy-import": "^3.0.0",
-    "prettier": "^1.18.2",
+    "prettier": "^1.19.1",
     "react-docgen-typescript-loader": "^3.3.0",
     "ts-jest": "^24.1.0",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
-    "typescript": "^3.6.4"
+    "typescript": "^3.7.2"
   }
 }
