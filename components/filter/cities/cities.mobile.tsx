@@ -11,7 +11,7 @@ export const CitiesCard = () => (
     {cities.map((city, index) => (
       <div key={index} className="w-10/12 h-full mx-auto my-4">
         <div
-          className="p-5 rounded-exlg h-40 relative shadow-md border-gray-300 border"
+          className="p-70 rounded-exlg h-40 relative shadow-md border-gray-300 border"
           style={{ background: `url(${city.img}) 61% 20% no-repeat`, backgroundSize: '113%' }}
         ></div>
         <div>
