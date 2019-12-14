@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Collections, Cities, FilterHeader } from '@tcc/components';
+import { Collections, FilterHeader } from '@tcc/components';
 
 type PropsType = { title: string; dummyData: string[] };
 
@@ -8,7 +8,7 @@ const Collection = (props: PropsType) => {
   return (
     <div className="w-full sm:w-full md:w-full lg:w-3/4 xl:w-3/4 mx-auto">
       <FilterHeader current="collection" title={props.title} />
-      <Collections {...props} />
+      <Collections dummyData={props.dummyData} />
     </div>
   );
 };

@@ -18,7 +18,7 @@ Home.getInitialProps = async function(props) {
   return {
     title,
     cities: [
-      { name: 'Toronto123', img: '/toronto-pic.png', nation: 'Canada' },
+      { name: 'Toronto', img: '/toronto-pic.png', nation: 'Canada' },
       { name: 'Vancouver', img: '/vancouver-pic.png', nation: 'Canada' },
       { name: 'Newyork', img: '/newyork-pic.png', nation: 'United States' },
     ],

@@ -11,7 +11,11 @@ export const CitiesCard = (props: PropsType) => (
       <div
         key={index}
         className="w-10/12 h-full mx-auto my-4"
-        onClick={() => Router.push(`/cities?id=${city.name}`, '/cities-list')}
+        onClick={() =>
+          Router.push(`/cities?id=${city.name}`, '/cities-list', {
+            query: { name: 'Toronto' },
+          })
+        }
       >
         <div
           className="p-70 rounded-exlg h-40 relative shadow-md border-gray-300 border"

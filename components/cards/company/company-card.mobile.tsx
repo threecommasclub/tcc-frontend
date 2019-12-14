@@ -10,11 +10,11 @@ const tags = ['Fintech', 'Employ Benefit', 'Consulting'];
 export const CompanyCard = ({ name, address }: PropsType) => (
   <div className="p-10">
     <p className="text-gray-600 text-2xl font-bold my-20 ml-10 mb-30">Companies</p>
-    <div className="p-6 rounded-exlg h-auto relative shadow-md border-gray-300 border mt-10 mb-5">
+    <div className="p-6 rounded-exlg h-auto relative shadow-md border-gray-300 border mt-10 mb-5 bg-white">
       <div className="w-1/6 h-1/6 inline-block m-0 align-middle">
-        <div className="rounded-full bg-gray-600 w-60 h-60 absolute top-in20 shadow-md"></div>
+        <div className="rounded-full bg-gray-600 w-60 h-60 absolute top-in20 shadow-md "></div>
       </div>
-      <div className="w-5/6 inline-block align-middle pl-8">
+      <div className="w-5/6 inline-block align-middle pl-8 ">
         <div className="inline-block absolute top-3 right-05 top-1/10">bookmark</div>
         <div className="block">
           <span className="text-lg font-bold">{name}</span>
