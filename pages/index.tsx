@@ -1,21 +1,28 @@
 import React from 'react';
+import Link from 'next/link';
+import { Cities, FilterHeader } from '@tcc/components';
 
-import { Header, CompanyCard } from '@tcc/components';
+type PropsType = { title: string; cities: string[] };
 
-const props = {
-  name: 'companyUsing',
-  date: '11th Oct 2019',
-  address: '177 linus rd, North York',
-};
-
-const Home = () => {
+const Home = (props: PropsType) => {
   return (
-    <div>
-      <Header>This is Landing Page</Header>
-      <p>Please use /react page for implementing the project</p>
-      <CompanyCard {...props} />
+    <div className="w-full sm:w-full md:w-full lg:w-3/4 xl:w-3/4 mx-auto">
+      <FilterHeader current="city" title={props.title} />
+      <Cities cities={props.cities} />
     </div>
   );
+};
+
+Home.getInitialProps = async function(props) {
+  const title = 'Discovery';
+  return {
+    title,
+    cities: [
+      { name: 'Toronto123', img: '/toronto-pic.png', nation: 'Canada' },
+      { name: 'Vancouver', img: '/vancouver-pic.png', nation: 'Canada' },
+      { name: 'Newyork', img: '/newyork-pic.png', nation: 'United States' },
+    ],
+  };
 };
 
 export default Home;

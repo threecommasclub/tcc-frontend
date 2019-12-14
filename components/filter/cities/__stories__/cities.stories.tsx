@@ -1,16 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { object } from '@storybook/addon-knobs/react';
-
 import { CitiesCard } from '../cities.mobile';
 
-const label = 'CitiesCard';
+const cities = [
+  { name: 'Toronto456', img: '/toronto-pic.png', nation: 'Canada' },
+  { name: 'Vancouver', img: '/vancouver-pic.png', nation: 'Canada' },
+  { name: 'Newyork', img: '/newyork-pic.png', nation: 'United States' },
+];
 
 storiesOf('Filters/CitiesCard', module).add('CitiesCard', () => {
-  const defaultValue = {
-    name: 'Toronto',
-    nation: 'Canada',
-  };
-  const props = object(label, defaultValue);
-  return <CitiesCard {...props} />;
+  return <CitiesCard cities={cities} />;
 });

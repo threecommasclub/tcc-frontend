@@ -1,20 +1,13 @@
 import React from 'react';
-import toronto from '../../../public/toronto-pic.png';
 
-type CollectionsCardProps = {
-  title: string;
+type PropsType = {
+  dummyData: string[];
 };
 
-const dummyData = [
-  'Top 10\nMost Impactful\nAI\nStartups in Toronto',
-  'Top 6\nFast Growing\nFintech\nStartups in New York',
-  'Top 7\nFast Growing\nFood Tech\nStartups in Vancouver',
-];
-
-export const CollectionsCard = ({ title }: CollectionsCardProps) => (
+export const CollectionsCard = (props: PropsType) => (
   <div className="w-full h-full mx-auto">
-    {dummyData.map((data, index) => (
-      <div className="bg-orange-500 p-5 rounded-exlg w-10/12 mx-auto my-4" key={index}>
+    {props.dummyData.map((data, index) => (
+      <div className="bg-orange-500 p-20 rounded-exlg w-10/12 mx-auto my-4 mb-20" key={index}>
         <div className="w-full">
           {data.split('\n').map((item, i) => (
             <span className="text-white font-bold text-lg whitespace-no-wrap overflow-hidden" key={i}>

@@ -1,15 +1,18 @@
 import React from 'react';
+import Router from 'next/router';
 
-const cities = [
-  { name: 'Toronto', img: '/toronto-pic.png', nation: 'Canada' },
-  { name: 'Vancouver', img: '/vancouver-pic.png', nation: 'Canada' },
-  { name: 'Newyork', img: '/newyork-pic.png', nation: 'United States' },
-];
+type PropsType = {
+  cities: any;
+};
 
-export const CitiesCard = () => (
+export const CitiesCard = (props: PropsType) => (
   <div className="w-full h-full mx-auto">
-    {cities.map((city, index) => (
-      <div key={index} className="w-10/12 h-full mx-auto my-4">
+    {props.cities.map((city, index) => (
+      <div
+        key={index}
+        className="w-10/12 h-full mx-auto my-4"
+        onClick={() => Router.push(`/cities?id=${city.name}`, '/cities-list')}
+      >
         <div
           className="p-70 rounded-exlg h-40 relative shadow-md border-gray-300 border"
           style={{ background: `url(${city.img}) 61% 20% no-repeat`, backgroundSize: '113%' }}
