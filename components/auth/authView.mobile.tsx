@@ -7,7 +7,7 @@ const pizzaClick = () => console.log('pizza!');
 
 export const AuthView = () => (
   <div className="w-full h-full mx-auto">
-    <Menu click={pizzaClick} />
+    <Menu />
     <AuthInput />
     <Footer />
   </div>
