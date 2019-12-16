@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import Router from 'next/router';
 
 type PropsType = {
   companyData: any;
@@ -7,12 +8,16 @@ type PropsType = {
 export const CompanyCard = (props: PropsType) => (
   <Fragment>
     <div className="p-10">
-      {console.log('props here?', props)}
       <p className="text-gray-600 text-2xl font-bold my-20 ml-10 mb-30">Companies</p>
       {props.companyData.map((data, index) => (
         <div
           className="p-6 rounded-exlg h-auto relative shadow-md border-gray-300 border mt-10 mb-30 bg-white"
           key={index}
+          onClick={() =>
+            Router.push(`/detail?id=${props.companyData.id}`, '/detail', {
+              query: { id: `${props.companyData.id}` },
+            })
+          }
         >
           <div className="w-1/6 h-1/6 inline-block m-0 align-middle">
             <div className="rounded-full bg-gray-600 w-60 h-60 absolute top-in20 shadow-md "></div>
