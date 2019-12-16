@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { Collections, FilterHeader } from '@tcc/components';
 
 type PropsType = { title: string; dummyData: string[] };

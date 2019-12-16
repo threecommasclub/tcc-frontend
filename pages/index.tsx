@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import { Cities, FilterHeader } from '@tcc/components';
+import { Cities, FilterHeader, Footer } from '@tcc/components';
 
 type PropsType = { title: string; cities: string[] };
 
@@ -9,6 +8,7 @@ const Home = (props: PropsType) => {
     <div className="w-full sm:w-full md:w-full lg:w-3/4 xl:w-3/4 mx-auto">
       <FilterHeader current="city" title={props.title} />
       <Cities cities={props.cities} />
+      <Footer />
     </div>
   );
 };

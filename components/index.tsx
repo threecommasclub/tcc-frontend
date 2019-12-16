@@ -6,4 +6,6 @@ export { default as Collections } from './filter/collections/collections.mobile'
 export { default as FilterHeader } from './filter/header/header.mobile';
 export { default as Detail } from './detail/detail.mobile';
 export { default as Header } from './header/header.mobile';
+export { default as Footer } from './footer/footer.mobile';
+export { default as Auth } from './auth/authView.mobile';
 export { default as Map } from './map/map';

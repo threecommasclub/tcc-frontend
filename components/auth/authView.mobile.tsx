@@ -3,11 +3,13 @@ import Menu from './menu/menu.mobile';
 import AuthInput from './input/input.mobile';
 import Footer from './footer/footer.mobile';
 
-const pizzaClick = () => console.log('pizza!');
+type PropsType = {
+  current: string;
+};
 
-export const AuthView = () => (
+export const AuthView = (props: PropsType) => (
   <div className="w-full h-full mx-auto">
-    <Menu />
+    <Menu current={props.current} />
     <AuthInput />
     <Footer />
   </div>
