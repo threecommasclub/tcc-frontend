@@ -3,7 +3,7 @@ import { FlickingEvent, SelectEvent, ChangeEvent, NeedPanelEvent } from '@egjs/f
 import Flicking from '@egjs/react-flicking';
 
 type PropsType = {
-  dummyData: string[];
+  dummyData: any;
 };
 
 export const CurationCard = (props: PropsType) => (
